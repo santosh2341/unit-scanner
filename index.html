@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Unit Scanner</title>
+<link rel="manifest" href="manifest.json">
+<style>body{font-family:sans-serif;text-align:center;padding:10px}video{width:90%;border-radius:10px}textarea{width:90%;height:150px}</style>
+</head>
+<body>
+
+<h2>Unit Scanner</h2>
+
+<video id="video" autoplay></video><br>
+<button onclick="capture()">Scan Sticker</button><br><br>
+
+<canvas id="canvas" style="display:none;"></canvas>
+
+<h3>Detected Text</h3>
+<textarea id="output"></textarea><br>
+
+<button onclick="shareText()">Share</button>
+
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
