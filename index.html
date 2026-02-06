@@ -12,15 +12,18 @@
 <div class="container">
   <h1>Unit Scanner</h1>
 
+  <!-- HOME -->
   <div id="home">
     <button class="big-btn" onclick="selectType('HWS')">HWS</button>
     <button class="big-btn" onclick="selectType('AC')">AC</button>
   </div>
 
+  <!-- SCANNER -->
   <div id="scanner" style="display:none;">
     <h3 id="scanTitle"></h3>
 
     <video id="video" autoplay></video>
+
     <button class="action-btn" onclick="capture()">Scan Sticker</button>
 
     <canvas id="canvas" style="display:none;"></canvas>
@@ -32,6 +35,7 @@
       <button onclick="goHome()">Back</button>
     </div>
   </div>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
