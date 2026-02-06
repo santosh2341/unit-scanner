@@ -3,22 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <title>Unit Scanner</title>
-<link rel="manifest" href="manifest.json">
-<style>body{font-family:sans-serif;text-align:center;padding:10px}video{width:90%;border-radius:10px}textarea{width:90%;height:150px}</style>
+<style>
+body{font-family:sans-serif;text-align:center;padding:10px}
+button{padding:10px;margin:5px}
+video{width:95%;border-radius:10px}
+textarea{width:95%;height:150px}
+</style>
 </head>
 <body>
 
 <h2>Unit Scanner</h2>
 
-<video id="video" autoplay></video><br>
-<button onclick="capture()">Scan Sticker</button><br><br>
+<div id="start">
+<button onclick="selectType('HWS')">HWS</button>
+<button onclick="selectType('AC')">AC</button>
+</div>
 
-<canvas id="canvas" style="display:none;"></canvas>
+<div id="scanner" style="display:none;">
+<video id="video" autoplay playsinline></video><br>
+<button onclick="capture()">Scan</button>
+</div>
 
-<h3>Detected Text</h3>
+<h3 id="fieldTitle"></h3>
 <textarea id="output"></textarea><br>
-
-<button onclick="shareText()">Share</button>
+<button onclick="shareText()">Export</button>
 
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 <script src="app.js"></script>
